@@ -1,0 +1,9 @@
+Checks:           '*, -fuchsia-*, -objc-*, -zircon-*'
+WarningsAsErrors: '*'
+CheckOptions:
+  - key: readability-function-size.LineThreshold
+    value: 100
+  - key: readability-function-size.BranchThreshold
+    value: 5
+  - key: readability-function-size.ParameterThreshold
+    value: 5
