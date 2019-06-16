@@ -10,8 +10,13 @@ class ExampleCppConan(ConanFile):
     description = "Example Cpp project"
     settings = "os", "compiler", "build_type", "arch"
     generators = "cmake", "virtualenv"
-    requires = (    )
-    build_requires = (    )
+    requires = (
+        "boost/1.70.0@conan/stable",
+    )
+    build_requires = (
+        "gtest/1.8.1@bincrafters/stable",
+        "google-benchmark/1.4.1@mpusz/stable",
+    )
     exports_sources = "*"
     options = {"shared": [True, False], "debug": [True, False]}
     default_options = (
